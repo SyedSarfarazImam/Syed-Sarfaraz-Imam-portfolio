@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sony Internship | Syed Sarfaraz Imam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #050505;
+            background: radial-gradient(circle at 50% 50%, #1a0b2e 0%, #050505 100%);
+            background-attachment: fixed;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'royal-blue': '#002366',
+                        'deep-purple': '#1a0b2e',
+                        'gold': '#D4AF37',
+                        'gold-light': '#F1D592',
+                        'gold-dark': '#996515',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-white font-sans selection:bg-gold selection:text-black overflow-x-hidden">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor hidden md:block"></div>
+    <div class="custom-cursor-dot hidden md:block"></div>
+
+    <!-- Noise Background -->
+    <div class="noise-bg"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-serif font-bold gold-text-gradient">SSI</span>
+                </a>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Home</a>
+                    <a href="index.html#about" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">About</a>
+                    <a href="index.html#education" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Education</a>
+                    <a href="index.html#experience" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Experience</a>
+                    <a href="index.html#skills" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Skills</a>
+                    <a href="index.html#services" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Services</a>
+                    <a href="index.html#projects" class="text-sm font-medium text-gold transition-colors">Projects</a>
+                    <a href="index.html#certificates" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Certificates</a>
+                    <a href="index.html#contact" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i id="menu-icon" data-lucide="menu" class="w-7 h-7"></i>
+                        <i id="close-icon" data-lucide="x" class="w-7 h-7 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="min-h-screen">
+        <!-- Hero Header -->
+        <div class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://i.ibb.co/t17rmYx/sony-bg.jpg" alt="Sony Internship" class="w-full h-full object-cover opacity-40 scale-110 hover:scale-100 transition-transform duration-1000" referrerPolicy="no-referrer">
+                <div class="absolute inset-0 bg-gradient-to-t from-deep-purple via-deep-purple/60 to-transparent"></div>
+            </div>
+            
+            <div class="relative z-10 text-center px-4">
+                <div class="inline-flex items-center space-x-2 text-gold mb-4 glass-card px-4 py-2 rounded-full">
+                    <i data-lucide="briefcase" class="w-4 h-4"></i>
+                    <span class="uppercase tracking-widest font-bold text-xs">Professional Internship</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 gold-text-gradient">Sony Sales Executive</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto font-light">
+                    Driving market growth and product excellence at Sony (ManpowerGroup).
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24 relative z-20 pb-24">
+            <div class="glass-card p-8 md:p-12 mb-12">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="md:col-span-2 space-y-8">
+                        <section>
+                            <h2 class="text-2xl font-serif font-bold mb-4 text-gold">Executive Summary</h2>
+                            <p class="text-gray-300 leading-relaxed text-lg">
+                                During my tenure as a Sales Executive Intern at Sony, I was responsible for representing the brand's premium electronics portfolio. My role involved direct customer engagement, technical product demonstrations, and strategic market analysis to drive sales volume and enhance customer satisfaction.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 class="text-2xl font-serif font-bold mb-4 text-gold">Key Responsibilities</h2>
+                            <ul class="space-y-4">
+                                <li class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle-2" class="text-gold w-6 h-6 shrink-0 mt-1"></i>
+                                    <span class="text-gray-300">Conducted high-impact product demonstrations for Sony's premium audio and visual equipment.</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle-2" class="text-gold w-6 h-6 shrink-0 mt-1"></i>
+                                    <span class="text-gray-300">Managed inventory levels and optimized shelf placement for maximum visibility.</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle-2" class="text-gold w-6 h-6 shrink-0 mt-1"></i>
+                                    <span class="text-gray-300">Analyzed competitor pricing and promotional strategies to provide actionable market insights.</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle-2" class="text-gold w-6 h-6 shrink-0 mt-1"></i>
+                                    <span class="text-gray-300">Cultivated long-term relationships with retail partners and end-consumers.</span>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="glass-card p-6 border-white/5">
+                            <h3 class="text-lg font-bold mb-4 text-gold uppercase tracking-widest text-sm">Project Info</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="text-gray-500 text-xs uppercase mb-1">Company</div>
+                                    <div class="text-white font-medium">Sony (ManpowerGroup)</div>
+                                </div>
+                                <div>
+                                    <div class="text-gray-500 text-xs uppercase mb-1">Duration</div>
+                                    <div class="text-white font-medium">2025 - Present</div>
+                                </div>
+                                <div>
+                                    <div class="text-gray-500 text-xs uppercase mb-1">Location</div>
+                                    <div class="text-white font-medium">Ranchi, India</div>
+                                </div>
+                                <div>
+                                    <div class="text-gray-500 text-xs uppercase mb-1">Role</div>
+                                    <div class="text-white font-medium">Sales Executive Intern</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-6 border-white/5">
+                            <h3 class="text-lg font-bold mb-4 text-gold uppercase tracking-widest text-sm">Skills Applied</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">Strategic Sales</span>
+                                <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">Market Analysis</span>
+                                <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">CRM</span>
+                                <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10">Product Mastery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center">
+                <a href="index.html#projects" class="inline-flex items-center space-x-2 text-gray-400 hover:text-gold transition-colors font-bold">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    <span>Back to Projects</span>
+                </a>
+                <a href="project-poster.html" class="inline-flex items-center space-x-2 text-gold hover:text-gold-light transition-colors font-bold">
+                    <span>Next Project</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-600 text-sm">
+                © 2026 Syed Sarfaraz Imam. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

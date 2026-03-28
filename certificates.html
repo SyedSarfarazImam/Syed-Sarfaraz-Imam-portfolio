@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | Syed Sarfaraz Imam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #050505;
+            background: radial-gradient(circle at 50% 50%, #1a0b2e 0%, #050505 100%);
+            background-attachment: fixed;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'royal-blue': '#002366',
+                        'deep-purple': '#1a0b2e',
+                        'gold': '#D4AF37',
+                        'gold-light': '#F1D592',
+                        'gold-dark': '#996515',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-white font-sans selection:bg-gold selection:text-black overflow-x-hidden">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor hidden md:block"></div>
+    <div class="custom-cursor-dot hidden md:block"></div>
+
+    <!-- Noise Background -->
+    <div class="noise-bg"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-serif font-bold gold-text-gradient">SSI</span>
+                </a>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Home</a>
+                    <a href="index.html#about" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">About</a>
+                    <a href="index.html#education" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Education</a>
+                    <a href="index.html#experience" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Experience</a>
+                    <a href="index.html#skills" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Skills</a>
+                    <a href="index.html#services" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Services</a>
+                    <a href="index.html#projects" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Projects</a>
+                    <a href="index.html#certificates" class="text-sm font-medium text-gold transition-colors">Certificates</a>
+                    <a href="index.html#contact" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i id="menu-icon" data-lucide="menu" class="w-7 h-7"></i>
+                        <i id="close-icon" data-lucide="x" class="w-7 h-7 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Home</a>
+                <a href="index.html#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">About</a>
+                <a href="index.html#education" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Education</a>
+                <a href="index.html#experience" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Experience</a>
+                <a href="index.html#skills" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Skills</a>
+                <a href="index.html#services" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Services</a>
+                <a href="index.html#projects" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Projects</a>
+                <a href="index.html#certificates" class="block px-3 py-2 text-base font-medium text-gold">Certificates</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center space-x-2 text-gold mb-4">
+                    <i data-lucide="award" class="w-6 h-6"></i>
+                    <span class="uppercase tracking-widest font-bold">Credentials</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-serif font-bold mb-6">Certificates & <span class="text-gold">Achievements</span></h1>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    A comprehensive record of my professional certifications, academic wins, and competitive achievements.
+                </p>
+            </div>
+
+            <div id="certificates-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+                <!-- Certificates will be injected here or hardcoded -->
+                <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                    <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2026</div>
+                    <h3 class="text-xl font-bold mb-3">Innovative Hardware Model Making 2026</h3>
+                    <div class="text-gray-500 text-sm mb-4">International Level</div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Recognized for excellence in hardware innovation and model design at an international competition.</p>
+                    <a href="https://ibb.co/zVpVmqqb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                        <span>View Full Certificate</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                    <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2025</div>
+                    <h3 class="text-xl font-bold mb-3">Sales Executive Internship Certificate</h3>
+                    <div class="text-gray-500 text-sm mb-4">Sony (ManpowerGroup)</div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Recognition for outstanding sales performance and product mastery during the Sony internship.</p>
+                    <a href="https://ibb.co/wr6TwQPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                        <span>View Full Certificate</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                    <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2025</div>
+                    <h3 class="text-xl font-bold mb-3">Business Statistics</h3>
+                    <div class="text-gray-500 text-sm mb-4">Academic Achievement</div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Demonstrated proficiency in statistical analysis and data-driven decision making.</p>
+                    <a href="https://ibb.co/NdVcHQbW" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                        <span>View Full Certificate</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                    <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2026</div>
+                    <h3 class="text-xl font-bold mb-3">Social Media Marketing</h3>
+                    <div class="text-gray-500 text-sm mb-4">HP Life</div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Certified expertise in digital marketing strategies and social media engagement.</p>
+                    <a href="https://ibb.co/5WR1VWbh" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                        <span>View Full Certificate</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                    <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2026</div>
+                    <h3 class="text-xl font-bold mb-3">University Carrom Competition (2nd Place)</h3>
+                    <div class="text-gray-500 text-sm mb-4">University Level</div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Achieved 2nd position in the university-level carrom tournament.</p>
+                    <a href="https://ibb.co/HfgZVpSq" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                        <span>View Full Certificate</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                    <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2026</div>
+                    <h3 class="text-xl font-bold mb-3">Selling Online</h3>
+                    <div class="text-gray-500 text-sm mb-4">HP Life</div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Mastery of e-commerce principles and online sales techniques.</p>
+                    <a href="https://ibb.co/ZRYx8B6j" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                        <span>View Full Certificate</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                    <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2025</div>
+                    <h3 class="text-xl font-bold mb-3">Poster Making & Presentation (1st Position)</h3>
+                    <div class="text-gray-500 text-sm mb-4">College Level</div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Won 1st prize for "Digital Transformation" poster and presentation.</p>
+                    <a href="https://ibb.co/LDmQgYNs" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                        <span>View Full Certificate</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                    <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2026</div>
+                    <h3 class="text-xl font-bold mb-3">Your Target Audience</h3>
+                    <div class="text-gray-500 text-sm mb-4">HP Life</div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Strategic certification in audience identification and market segmentation.</p>
+                    <a href="https://ibb.co/KzWz3Ppr" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                        <span>View Full Certificate</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- AI Prompt Writing Section -->
+            <div class="glass-card p-10 border-gold/30 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-10 opacity-10">
+                    <i data-lucide="brain-circuit" class="w-32 h-32"></i>
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-serif font-bold mb-8 flex items-center space-x-4">
+                        <i data-lucide="brain-circuit" class="text-gold w-8 h-8"></i>
+                        <span>AI Prompt Writing Showcase</span>
+                    </h2>
+                    <div class="bg-black/40 backdrop-blur-md rounded-2xl p-8 border border-white/10 mb-8">
+                        <h3 class="text-gold font-bold mb-4 uppercase tracking-widest text-sm">Sample Prompt Orchestration</h3>
+                        <p class="text-gray-300 font-mono text-sm leading-relaxed mb-6 italic">
+                            "Act as a Senior Marketing Strategist. Develop a comprehensive 30-day market entry strategy for a premium electronics brand in the Tier-2 cities of India. Focus on hyper-local engagement, psychological pricing models, and a multi-channel sales funnel that integrates both offline retail and digital touchpoints. Provide a breakdown of KPIs for each phase..."
+                        </p>
+                        <div class="flex items-center space-x-2 text-gray-500 text-xs">
+                            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span>Demonstrating strategic AI integration and logic design.</span>
+                        </div>
+                    </div>
+                    <a href="https://ibb.co/KzVB7F4H" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3 bg-gold text-black font-bold px-8 py-4 rounded-full hover:bg-gold-light transition-all shadow-xl shadow-gold/20">
+                        <span>View AI Website Sample</span>
+                        <i data-lucide="external-link" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+                <div class="text-center md:text-left">
+                    <a href="index.html" class="text-2xl font-serif font-bold gold-text-gradient mb-2 block">SSI</a>
+                    <p class="text-gray-500 text-sm max-w-xs">
+                        Aspiring Marketing & Sales Professional dedicated to driving business growth and innovation.
+                    </p>
+                </div>
+
+                <div class="flex space-x-8">
+                    <a href="https://linkedin.com/in/syedsarfarazimam" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gold transition-colors">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="mailto:sarfarazsyedimam@gmail.com" class="text-gray-400 hover:text-gold transition-colors">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </a>
+                    <a href="tel:+919749577450" class="text-gray-400 hover:text-gold transition-colors">
+                        <i data-lucide="phone" class="w-6 h-6"></i>
+                    </a>
+                </div>
+
+                <button id="scroll-to-top" class="p-4 bg-white/5 rounded-full text-gold hover:bg-gold hover:text-black transition-all border border-white/10">
+                    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/5 text-center">
+                <p class="text-gray-600 text-sm">
+                    © 2026 Syed Sarfaraz Imam. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

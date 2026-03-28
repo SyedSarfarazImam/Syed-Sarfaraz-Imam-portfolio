@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Sarfaraz Imam | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #050505;
+            background: radial-gradient(circle at 50% 50%, #1a0b2e 0%, #050505 100%);
+            background-attachment: fixed;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'royal-blue': '#002366',
+                        'deep-purple': '#1a0b2e',
+                        'gold': '#D4AF37',
+                        'gold-light': '#F1D592',
+                        'gold-dark': '#996515',
+                    },
+                    animation: {
+                        'spin-slow': 'spin 8s linear infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-white font-sans selection:bg-gold selection:text-black overflow-x-hidden">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor hidden md:block"></div>
+    <div class="custom-cursor-dot hidden md:block"></div>
+
+    <!-- Noise Background -->
+    <div class="noise-bg"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-serif font-bold gold-text-gradient">SSI</span>
+                </a>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Home</a>
+                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">About</a>
+                    <a href="#education" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Education</a>
+                    <a href="#experience" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Experience</a>
+                    <a href="#skills" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Skills</a>
+                    <a href="#services" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Services</a>
+                    <a href="#projects" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Projects</a>
+                    <a href="#certificates" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Certificates</a>
+                    <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i id="menu-icon" data-lucide="menu" class="w-7 h-7"></i>
+                        <i id="close-icon" data-lucide="x" class="w-7 h-7 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">About</a>
+                <a href="#education" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Education</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Experience</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Skills</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Services</a>
+                <a href="#projects" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Projects</a>
+                <a href="#certificates" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Certificates</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+            <div class="absolute top-1/4 -left-20 w-96 h-96 bg-royal-blue/20 rounded-full blur-[120px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-deep-purple/20 rounded-full blur-[120px] animate-pulse delay-1000"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="text-left">
+                        <div class="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-gold mb-8">
+                            <i data-lucide="sparkles" class="w-3.5 h-3.5 animate-spin-slow"></i>
+                            <span class="uppercase tracking-widest">Available for MNC Opportunities</span>
+                        </div>
+
+                        <h1 class="text-5xl md:text-8xl font-serif font-bold mb-6 leading-[0.9] tracking-tighter">
+                            Hi, I'm <br />
+                            <span class="gold-text-gradient italic">Sarfaraz</span>
+                        </h1>
+                        
+                        <h2 class="text-xl md:text-2xl text-gray-400 font-medium mb-8 tracking-wide uppercase max-w-xl">
+                            Aspiring Marketing & Sales Professional <span class="text-gold">/</span> BBA Student <span class="text-gold">/</span> Future MNC Leader
+                        </h2>
+
+                        <p class="max-w-xl text-gray-400 text-lg mb-10 leading-relaxed border-l-2 border-gold/30 pl-6">
+                            Strategic-minded BBA student at Asansol Engineering College with a proven track record in sales and marketing. Passionate about driving business growth through innovative strategies and hyper-local engagement.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#projects" class="px-8 py-4 bg-gold text-black font-bold rounded-full flex items-center space-x-2 hover:bg-gold-light transition-all shadow-lg shadow-gold/20">
+                                <span>View My Work</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#contact" class="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 font-bold rounded-full flex items-center space-x-2 hover:bg-white/10 transition-all">
+                                <i data-lucide="mail" class="w-5 h-5 text-gold"></i>
+                                <span>Contact Me</span>
+                            </a>
+                            <a href="#certificates" class="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 font-bold rounded-full flex items-center space-x-2 hover:bg-white/10 transition-all">
+                                <i data-lucide="award" class="w-5 h-5 text-gold"></i>
+                                <span>Certifications</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="relative z-10 aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 group">
+                            <img src="https://i.ibb.co/7xY7DHgW/Whats-App-Image-2026-03-10-at-11-23-44.jpg" alt="Syed Sarfaraz Imam" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" referrerPolicy="no-referrer">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 right-8">
+                                <div class="glass-card p-6 border-gold/20">
+                                    <div class="text-gold font-bold text-sm uppercase tracking-widest mb-1">Current Focus</div>
+                                    <div class="text-white font-serif text-xl">Marketing & Sales Strategy</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-10 -right-10 w-40 h-40 border-2 border-gold/20 rounded-full animate-spin-slow"></div>
+                        <div class="absolute -bottom-10 -left-10 w-24 h-24 bg-gold/10 rounded-full blur-2xl"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-gold/50 animate-bounce">
+                <div class="w-6 h-10 border-2 border-gold/30 rounded-full flex justify-center p-1">
+                    <div class="w-1 h-2 bg-gold rounded-full"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center md:text-left">
+                        <div class="inline-flex items-center space-x-2 text-gold mb-4">
+                            <i data-lucide="user" class="w-5 h-5"></i>
+                            <span class="uppercase tracking-widest font-bold text-sm">Professional Bio</span>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8">
+                            Driving Growth through <span class="text-gold">Strategic Sales</span> & Marketing
+                        </h2>
+                        <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
+                            <p>
+                                As a results-driven professional with a strong foundation in Business Administration, I specialize in identifying market opportunities and converting them into sustainable growth. My approach combines analytical market research with a high-energy sales methodology, ensuring that every customer interaction adds value and builds long-term brand equity.
+                            </p>
+                            <p>
+                                During my tenure at Sony, I successfully generated over ₹9 Lakh in sales within a single month, demonstrating my ability to navigate complex retail environments and close high-value transactions. I am deeply passionate about understanding consumer behavior and leveraging those insights to develop compelling marketing strategies that resonate with target audiences.
+                            </p>
+                            <p>
+                                I am currently seeking opportunities to join a forward-thinking MNC where I can apply my expertise in business development, relationship management, and strategic marketing to drive organizational success.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
+                            <div class="glass-card p-8">
+                                <i data-lucide="target" class="w-10 h-10 text-gold mb-4"></i>
+                                <h3 class="text-xl font-bold text-white mb-2">Sales Strategy</h3>
+                                <p class="text-gray-500">Expertise in high-value conversions and relationship-based selling techniques.</p>
+                            </div>
+                            <div class="glass-card p-8">
+                                <i data-lucide="briefcase" class="w-10 h-10 text-gold mb-4"></i>
+                                <h3 class="text-xl font-bold text-white mb-2">Market Analysis</h3>
+                                <p class="text-gray-500">Deep understanding of consumer trends and competitive landscape positioning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4">Education <span class="text-gold">History</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">My academic journey and foundation in business administration.</p>
+                </div>
+
+                <div class="relative">
+                    <div class="timeline-line"></div>
+                    <div class="space-y-12">
+                        <!-- Education Item 1 -->
+                        <div class="relative flex items-center md:justify-between md:flex-row-reverse">
+                            <div class="hidden md:block w-5/12"></div>
+                            <div class="absolute left-4 md:left-1/2 w-10 h-10 bg-gold rounded-full flex items-center justify-center z-10 -translate-x-1/2 border-4 border-black">
+                                <i data-lucide="graduation-cap" class="w-6 h-6 text-black"></i>
+                            </div>
+                            <div class="ml-12 md:ml-0 md:w-5/12 glass-card p-8 hover:border-gold/50 transition-all">
+                                <div class="text-gold font-bold mb-2">Expected Graduation: 2027</div>
+                                <h3 class="text-xl font-bold mb-1">Bachelor of Business Administration (BBA)</h3>
+                                <div class="text-gray-300 font-medium mb-2">Asansol Engineering College</div>
+                                <div class="text-gray-400 text-sm mb-3">MAKAUT University</div>
+                                <div class="inline-block px-3 py-1 bg-white/5 rounded-full text-sm text-gold-light border border-white/10">
+                                    Current CGPA: 7.6 | Expected CGPA: 8+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Education Item 2 -->
+                        <div class="relative flex items-center md:justify-between">
+                            <div class="hidden md:block w-5/12"></div>
+                            <div class="absolute left-4 md:left-1/2 w-10 h-10 bg-gold rounded-full flex items-center justify-center z-10 -translate-x-1/2 border-4 border-black">
+                                <i data-lucide="calendar" class="w-6 h-6 text-black"></i>
+                            </div>
+                            <div class="ml-12 md:ml-0 md:w-5/12 glass-card p-8 hover:border-gold/50 transition-all">
+                                <div class="text-gold font-bold mb-2">Completed</div>
+                                <h3 class="text-xl font-bold mb-1">Higher Secondary Education (Class 12)</h3>
+                                <div class="text-gray-300 font-medium mb-2">CBSE Board</div>
+                                <div class="inline-block px-3 py-1 bg-white/5 rounded-full text-sm text-gold-light border border-white/10">
+                                    Score: 76%
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Education Item 3 -->
+                        <div class="relative flex items-center md:justify-between md:flex-row-reverse">
+                            <div class="hidden md:block w-5/12"></div>
+                            <div class="absolute left-4 md:left-1/2 w-10 h-10 bg-gold rounded-full flex items-center justify-center z-10 -translate-x-1/2 border-4 border-black">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-black"></i>
+                            </div>
+                            <div class="ml-12 md:ml-0 md:w-5/12 glass-card p-8 hover:border-gold/50 transition-all">
+                                <div class="text-gold font-bold mb-2">Completed</div>
+                                <h3 class="text-xl font-bold mb-1">Secondary Education (Class 10)</h3>
+                                <div class="text-gray-300 font-medium mb-2">CBSE Board</div>
+                                <div class="inline-block px-3 py-1 bg-white/5 rounded-full text-sm text-gold-light border border-white/10">
+                                    Score: 69.6%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4">Work <span class="text-gold">Experience</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Professional exposure and practical achievements in the industry.</p>
+                </div>
+
+                <div class="glass-card overflow-hidden">
+                    <div class="grid md:grid-cols-3">
+                        <div class="p-8 md:p-12 relative flex flex-col justify-center items-center text-center overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(0, 35, 102, 0.8), rgba(26, 11, 46, 0.9)), url('https://i.ibb.co/t17rmYx/image.jpg'); background-size: cover; background-position: center;">
+                            <div class="relative z-10">
+                                <h3 class="text-2xl font-bold mb-2">Sony</h3>
+                                <p class="text-gold font-medium">Sales Executive Intern</p>
+                                <p class="text-white/60 text-sm mt-4 italic">22 Sept 2025 – 21 Oct 2025</p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2 p-8 md:p-12">
+                            <div class="flex items-center space-x-3 mb-8">
+                                <div class="p-3 bg-gold/10 rounded-xl text-gold">
+                                    <i data-lucide="trending-up" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold">Key Achievement</h4>
+                                    <p class="text-gold-light font-bold text-2xl">₹9 Lakh+ Sales Generated</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="font-bold text-gray-300 uppercase tracking-widest text-sm mb-4">Responsibilities & Impact</h4>
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4.5 h-4.5 text-gold mt-1 flex-shrink-0"></i>
+                                    <p class="text-gray-400">Interacted directly with customers to understand needs</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4.5 h-4.5 text-gold mt-1 flex-shrink-0"></i>
+                                    <p class="text-gray-400">Explained complex product features and specifications</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4.5 h-4.5 text-gold mt-1 flex-shrink-0"></i>
+                                    <p class="text-gray-400">Presented strategic offers and promotions effectively</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4.5 h-4.5 text-gold mt-1 flex-shrink-0"></i>
+                                    <p class="text-gray-400">Assisted customers in making high-value purchase decisions</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle-2" class="w-4.5 h-4.5 text-gold mt-1 flex-shrink-0"></i>
+                                    <p class="text-gray-400">Built long-term customer trust and satisfaction</p>
+                                </div>
+                            </div>
+                            <div class="mt-10 p-6 bg-white/5 rounded-2xl border border-white/10 italic text-gray-400">
+                                "Successfully navigated the steep learning curve to generate high-impact results in a demanding retail market."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-6xl font-serif font-bold mb-4">My <span class="text-gold">Expertise</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">A blend of professional leadership and modern technical capabilities.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <div class="col-span-1 md:col-span-2 row-span-2 glass-card p-10 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-10 opacity-5">
+                            <i data-lucide="star" class="w-32 h-32"></i>
+                        </div>
+                        <h3 class="text-3xl font-serif font-bold mb-6 text-gold">Why Hire Me?</h3>
+                        <p class="text-xl text-gray-300 leading-relaxed italic">
+                            "A high-energy BBA student specializing in Marketing, I combine strategic communication with a data-driven approach to sales. My experience at Sony taught me the art of high-value conversion and customer relationship management. I am ready to leverage my creative problem-solving skills and adaptability to drive growth in a dynamic MNC environment."
+                        </p>
+                    </div>
+
+                    <div class="col-span-1 md:col-span-2 row-span-2 glass-card p-10">
+                        <h3 class="text-2xl font-bold mb-8 flex items-center space-x-3">
+                            <span class="w-8 h-1 bg-gold rounded-full"></span>
+                            <span>Core Competencies</span>
+                        </h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <div class="flex items-center space-x-2 text-gray-300">
+                                        <i data-lucide="bar-chart-3" class="w-4.5 h-4.5"></i>
+                                        <span class="font-medium">Sales</span>
+                                    </div>
+                                    <span class="text-gold font-bold">90%</span>
+                                </div>
+                                <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gold w-[90%]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <div class="flex items-center space-x-2 text-gray-300">
+                                        <i data-lucide="lightbulb" class="w-4.5 h-4.5"></i>
+                                        <span class="font-medium">Marketing</span>
+                                    </div>
+                                    <span class="text-gold font-bold">85%</span>
+                                </div>
+                                <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gold w-[85%]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <div class="flex items-center space-x-2 text-gray-300">
+                                        <i data-lucide="users" class="w-4.5 h-4.5"></i>
+                                        <span class="font-medium">Leadership</span>
+                                    </div>
+                                    <span class="text-gold font-bold">80%</span>
+                                </div>
+                                <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gold w-[80%]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <div class="flex items-center space-x-2 text-gray-300">
+                                        <i data-lucide="message-square" class="w-4.5 h-4.5"></i>
+                                        <span class="font-medium">Communication</span>
+                                    </div>
+                                    <span class="text-gold font-bold">95%</span>
+                                </div>
+                                <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gold w-[95%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 flex flex-col items-center justify-center text-center group">
+                        <div class="mb-4 transform group-hover:scale-110 transition-transform duration-500 text-blue-400">
+                            <i data-lucide="file-spreadsheet" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 group-hover:text-gold transition-colors">MS Office</span>
+                    </div>
+                    <div class="glass-card p-6 flex flex-col items-center justify-center text-center group">
+                        <div class="mb-4 transform group-hover:scale-110 transition-transform duration-500 text-green-500">
+                            <i data-lucide="file-spreadsheet" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 group-hover:text-gold transition-colors">Excel</span>
+                    </div>
+                    <div class="glass-card p-6 flex flex-col items-center justify-center text-center group">
+                        <div class="mb-4 transform group-hover:scale-110 transition-transform duration-500 text-orange-500">
+                            <i data-lucide="presentation" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 group-hover:text-gold transition-colors">PowerPoint</span>
+                    </div>
+                    <div class="glass-card p-6 flex flex-col items-center justify-center text-center group">
+                        <div class="mb-4 transform group-hover:scale-110 transition-transform duration-500 text-purple-400">
+                            <i data-lucide="bar-chart-3" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 group-hover:text-gold transition-colors">Statistics</span>
+                    </div>
+                    <div class="glass-card p-6 flex flex-col items-center justify-center text-center group">
+                        <div class="mb-4 transform group-hover:scale-110 transition-transform duration-500 text-gold">
+                            <i data-lucide="brain-circuit" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-sm font-bold uppercase tracking-widest text-gray-400 group-hover:text-gold transition-colors">AI Prompts</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4">Professional <span class="text-gold">Services</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Specialized solutions tailored for business growth and strategic development.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="mb-6 p-4 bg-white/5 rounded-2xl inline-block group-hover:bg-gold/10 transition-colors">
+                            <i data-lucide="megaphone" class="w-8 h-8 text-gold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-gold transition-colors">Marketing Consulting</h3>
+                        <p class="text-gray-400 leading-relaxed">Helping businesses plan effective marketing strategies to reach their target audience.</p>
+                    </div>
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="mb-6 p-4 bg-white/5 rounded-2xl inline-block group-hover:bg-gold/10 transition-colors">
+                            <i data-lucide="shopping-cart" class="w-8 h-8 text-gold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-gold transition-colors">Sales Support</h3>
+                        <p class="text-gray-400 leading-relaxed">Direct customer communication and product promotion to drive revenue growth.</p>
+                    </div>
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="mb-6 p-4 bg-white/5 rounded-2xl inline-block group-hover:bg-gold/10 transition-colors">
+                            <i data-lucide="search" class="w-8 h-8 text-gold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-gold transition-colors">Market Research</h3>
+                        <p class="text-gray-400 leading-relaxed">Collecting and analyzing market data to identify trends and opportunities.</p>
+                    </div>
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="mb-6 p-4 bg-white/5 rounded-2xl inline-block group-hover:bg-gold/10 transition-colors">
+                            <i data-lucide="pie-chart" class="w-8 h-8 text-gold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-gold transition-colors">Data Analysis</h3>
+                        <p class="text-gray-400 leading-relaxed">Using Excel and business statistics to provide actionable business insights.</p>
+                    </div>
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="mb-6 p-4 bg-white/5 rounded-2xl inline-block group-hover:bg-gold/10 transition-colors">
+                            <i data-lucide="presentation" class="w-8 h-8 text-gold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-gold transition-colors">Presentation Creation</h3>
+                        <p class="text-gray-400 leading-relaxed">Designing professional PowerPoint presentations for business and academic use.</p>
+                    </div>
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="mb-6 p-4 bg-white/5 rounded-2xl inline-block group-hover:bg-gold/10 transition-colors">
+                            <i data-lucide="brain-circuit" class="w-8 h-8 text-gold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-gold transition-colors">Prompt Writing</h3>
+                        <p class="text-gray-400 leading-relaxed">Creating effective prompts for AI tools to enhance productivity and creativity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4">Projects & <span class="text-gold">Achievements</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Showcasing my major accomplishments and practical contributions.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="glass-card overflow-hidden group">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800" alt="College Poster Presentation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                            <div class="absolute top-4 right-4 bg-gold text-black text-xs font-bold px-3 py-1 rounded-full">First Prize</div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <i data-lucide="trophy" class="w-6 h-6 text-gold"></i>
+                                <h3 class="text-xl font-bold">College Poster Presentation</h3>
+                            </div>
+                            <p class="text-gray-400 mb-6 line-clamp-2">Won First Prize for presenting "Digital Transformation" among 24 teams.</p>
+                            <a href="project-poster.html" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                                <span>Learn More</span>
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="glass-card overflow-hidden group">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://i.ibb.co/t17rmYx/image.jpg" alt="Sony Internship Achievement" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                            <div class="absolute top-4 right-4 bg-gold text-black text-xs font-bold px-3 py-1 rounded-full">₹9L+ Sales</div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <i data-lucide="trending-up" class="w-6 h-6 text-gold"></i>
+                                <h3 class="text-xl font-bold">Sony Internship Achievement</h3>
+                            </div>
+                            <p class="text-gray-400 mb-6 line-clamp-2">Generated ₹9 Lakh+ sales in just one month during the internship.</p>
+                            <a href="project-sony.html" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                                <span>Learn More</span>
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="glass-card overflow-hidden group">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Website Creation Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                            <div class="absolute top-4 right-4 bg-gold text-black text-xs font-bold px-3 py-1 rounded-full">Digital Innovation</div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <i data-lucide="laptop" class="w-6 h-6 text-gold"></i>
+                                <h3 class="text-xl font-bold">Website Creation Project</h3>
+                            </div>
+                            <p class="text-gray-400 mb-6 line-clamp-2">Developed a professional portfolio using AI tools and modern web tech.</p>
+                            <a href="project-website.html" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                                <span>Learn More</span>
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center space-x-2 text-gold mb-4">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                        <span class="uppercase tracking-widest font-bold">Credentials</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">Certificates & <span class="text-gold">Achievements</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                        A comprehensive record of my professional certifications, academic wins, and competitive achievements.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="award" class="w-10 h-10"></i>
+                        </div>
+                        <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2026</div>
+                        <h3 class="text-xl font-bold mb-3">Innovative Hardware Model Making 2026</h3>
+                        <div class="text-gray-500 text-sm mb-4">International Level</div>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Recognized for excellence in hardware innovation and model design at an international competition.</p>
+                        <a href="https://ibb.co/zVpVmqqb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                            <span>View Full Certificate</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="award" class="w-10 h-10"></i>
+                        </div>
+                        <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2025</div>
+                        <h3 class="text-xl font-bold mb-3">Sales Executive Internship Certificate</h3>
+                        <div class="text-gray-500 text-sm mb-4">Sony (ManpowerGroup)</div>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Recognition for outstanding sales performance and product mastery during the Sony internship.</p>
+                        <a href="https://ibb.co/wr6TwQPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                            <span>View Full Certificate</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="award" class="w-10 h-10"></i>
+                        </div>
+                        <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2025</div>
+                        <h3 class="text-xl font-bold mb-3">Business Statistics</h3>
+                        <div class="text-gray-500 text-sm mb-4">Academic Achievement</div>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Demonstrated proficiency in statistical analysis and data-driven decision making.</p>
+                        <a href="https://ibb.co/NdVcHQbW" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                            <span>View Full Certificate</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="award" class="w-10 h-10"></i>
+                        </div>
+                        <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2026</div>
+                        <h3 class="text-xl font-bold mb-3">Social Media Marketing</h3>
+                        <div class="text-gray-500 text-sm mb-4">HP Life</div>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Certified expertise in digital marketing strategies and social media engagement.</p>
+                        <a href="https://ibb.co/5WR1VWbh" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                            <span>View Full Certificate</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="award" class="w-10 h-10"></i>
+                        </div>
+                        <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2026</div>
+                        <h3 class="text-xl font-bold mb-3">University Carrom Competition (2nd Place)</h3>
+                        <div class="text-gray-500 text-sm mb-4">University Level</div>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Achieved 2nd position in the university-level carrom tournament.</p>
+                        <a href="https://ibb.co/HfgZVpSq" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                            <span>View Full Certificate</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="award" class="w-10 h-10"></i>
+                        </div>
+                        <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2026</div>
+                        <h3 class="text-xl font-bold mb-3">Selling Online</h3>
+                        <div class="text-gray-500 text-sm mb-4">HP Life</div>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Mastery of e-commerce principles and online sales techniques.</p>
+                        <a href="https://ibb.co/ZRYx8B6j" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                            <span>View Full Certificate</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="award" class="w-10 h-10"></i>
+                        </div>
+                        <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2025</div>
+                        <h3 class="text-xl font-bold mb-3">Poster Making & Presentation (1st Position)</h3>
+                        <div class="text-gray-500 text-sm mb-4">College Level</div>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Won 1st prize for "Digital Transformation" poster and presentation.</p>
+                        <a href="https://ibb.co/LDmQgYNs" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                            <span>View Full Certificate</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass-card p-8 hover:border-gold/50 transition-all group">
+                        <div class="text-gold mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="award" class="w-10 h-10"></i>
+                        </div>
+                        <div class="text-xs font-bold text-gold uppercase tracking-widest mb-2">2026</div>
+                        <h3 class="text-xl font-bold mb-3">Your Target Audience</h3>
+                        <div class="text-gray-500 text-sm mb-4">HP Life</div>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Strategic certification in audience identification and market segmentation.</p>
+                        <a href="https://ibb.co/KzWz3Ppr" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gold font-bold hover:text-gold-light transition-colors">
+                            <span>View Full Certificate</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AI Prompt Writing Section -->
+                <div class="glass-card p-10 border-gold/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-10 opacity-10">
+                        <i data-lucide="brain-circuit" class="w-32 h-32"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-serif font-bold mb-8 flex items-center space-x-4">
+                            <i data-lucide="brain-circuit" class="text-gold w-8 h-8"></i>
+                            <span>AI Prompt Writing Showcase</span>
+                        </h2>
+                        <div class="bg-black/40 backdrop-blur-md rounded-2xl p-8 border border-white/10 mb-8">
+                            <h3 class="text-gold font-bold mb-4 uppercase tracking-widest text-sm">Sample Prompt Orchestration</h3>
+                            <p class="text-gray-300 font-mono text-sm leading-relaxed mb-6 italic">
+                                "Act as a Senior Marketing Strategist. Develop a comprehensive 30-day market entry strategy for a premium electronics brand in the Tier-2 cities of India. Focus on hyper-local engagement, psychological pricing models, and a multi-channel sales funnel that integrates both offline retail and digital touchpoints. Provide a breakdown of KPIs for each phase..."
+                            </p>
+                            <div class="flex items-center space-x-2 text-gray-500 text-xs">
+                                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                <span>Demonstrating strategic AI integration and logic design.</span>
+                            </div>
+                        </div>
+                        <a href="https://ibb.co/KzVB7F4H" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3 bg-gold text-black font-bold px-8 py-4 rounded-full hover:bg-gold-light transition-all shadow-xl shadow-gold/20">
+                            <span>View AI Website Sample</span>
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8">Let's <span class="text-gold">Connect</span></h2>
+                        <p class="text-gray-400 text-lg mb-12 leading-relaxed">
+                            I am always open to discussing new opportunities, marketing strategies, or potential collaborations. Feel free to reach out to me through any of the following channels.
+                        </p>
+
+                        <div class="space-y-8">
+                            <div class="flex items-center space-x-6 group">
+                                <div class="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black transition-all">
+                                    <i data-lucide="mail" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-gray-500 uppercase tracking-widest mb-1">Email Me</div>
+                                    <a href="mailto:sarfarazsyedimam@gmail.com" class="text-xl font-bold hover:text-gold transition-colors">
+                                        sarfarazsyedimam@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-6 group">
+                                <div class="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black transition-all">
+                                    <i data-lucide="phone" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-gray-500 uppercase tracking-widest mb-1">Phone / WhatsApp</div>
+                                    <a href="tel:+919749577450" class="text-xl font-bold hover:text-gold transition-colors">
+                                        +91 9749577450
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-6 group">
+                                <div class="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black transition-all">
+                                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-gray-500 uppercase tracking-widest mb-1">LinkedIn</div>
+                                    <a href="https://linkedin.com/in/syedsarfarazimam" target="_blank" rel="noopener noreferrer" class="text-xl font-bold hover:text-gold transition-colors">
+                                        Syed Sarfaraz Imam
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-6 group">
+                                <div class="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black transition-all">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-gray-500 uppercase tracking-widest mb-1">Location</div>
+                                    <div class="text-xl font-bold">Burnpur Bus Stand, West Bengal, India</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-10">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-gold focus:ring-1 focus:ring-gold transition-all outline-none" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-gold focus:ring-1 focus:ring-gold transition-all outline-none" placeholder="john@example.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                                <textarea id="message" name="message" required rows="5" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-gold focus:ring-1 focus:ring-gold transition-all outline-none resize-none" placeholder="How can I help you?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gold text-black font-bold py-4 rounded-xl flex items-center justify-center space-x-2 hover:bg-gold-light transition-all shadow-lg shadow-gold/20">
+                                <span>Send Message</span>
+                                <i data-lucide="send" class="w-4.5 h-4.5"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+                <div class="text-center md:text-left">
+                    <a href="index.html" class="text-2xl font-serif font-bold gold-text-gradient mb-2 block">SSI</a>
+                    <p class="text-gray-500 text-sm max-w-xs">
+                        Aspiring Marketing & Sales Professional dedicated to driving business growth and innovation.
+                    </p>
+                </div>
+
+                <div class="flex space-x-8">
+                    <a href="https://linkedin.com/in/syedsarfarazimam" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gold transition-colors">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="mailto:sarfarazsyedimam@gmail.com" class="text-gray-400 hover:text-gold transition-colors">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </a>
+                    <a href="tel:+919749577450" class="text-gray-400 hover:text-gold transition-colors">
+                        <i data-lucide="phone" class="w-6 h-6"></i>
+                    </a>
+                </div>
+
+                <button id="scroll-to-top" class="p-4 bg-white/5 rounded-full text-gold hover:bg-gold hover:text-black transition-all border border-white/10">
+                    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/5 text-center">
+                <p class="text-gray-600 text-sm">
+                    © 2026 Syed Sarfaraz Imam. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
